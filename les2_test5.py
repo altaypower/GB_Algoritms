@@ -1,0 +1,20 @@
+"""
+Функция перевода десятичного числа в двоичный формат
+"""
+
+def binary(num):
+    s = ''
+    while num > 0:
+        s = f"{num%2}{s}"
+        num//=2
+    return s
+
+while True:
+    n=int(input("Введите целое число или 0 для завершения: "))
+    if n != 0:
+        print(binary(n))
+    else:
+        break
+
+
+
